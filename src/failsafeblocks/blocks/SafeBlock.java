@@ -21,13 +21,15 @@ public abstract class SafeBlock<INPUT, OUTPUT> {
 
 		while(!finishedOperation && !workingBlocks.isEmpty()){
 			try{
-				System.out.println("Attempting to procces " + workingBlocks.peek().getClass().getSimpleName() + " block...");
+				System.out.println("Attempting to procces " + workingBlocks.peek().getClass().getSimpleName() + "...");
 				result = workingBlocks.peek().process(input);
 				finishedOperation = true;
+				System.out.println(workingBlocks.peek().getClass().getSimpleName() + " succeeded!");
 			}
-			catch(Exception e){
-				System.out.println("Working block " + workingBlocks.peek().getClass().getSimpleName() + " failed!");
+			catch(Throwable e){
+				System.out.println("Working block " + workingBlocks.peek().getClass().getSimpleName() + " failed with input " + input.toString());
 				System.out.println(e);
+				System.out.println("Falling back...");
 				result = fallbackOutput();
 				workingBlocks.poll();
 			}

@@ -6,11 +6,11 @@ import failsafeblocks.blocks.sort.SortSafeBlock;
 public class Main {
 
 	public static void main(String[] args) {
-		NSizeRandomListSafeBlock nSizeListBlock = new NSizeRandomListSafeBlock();
+		NSizeRandomListSafeBlock nSizeRandomListSafeBlock = new NSizeRandomListSafeBlock();
 		SortSafeBlock<Integer> sortSafeBlock = new SortSafeBlock<Integer>();
 
-		System.out.println(nSizeListBlock.execute(21));
-		System.out.println(sortSafeBlock.execute(nSizeListBlock.execute(21)));
+		System.out.println(nSizeRandomListSafeBlock.execute(20));
+		System.out.println(sortSafeBlock.execute(nSizeRandomListSafeBlock.execute(100)));
 	}
 
 }

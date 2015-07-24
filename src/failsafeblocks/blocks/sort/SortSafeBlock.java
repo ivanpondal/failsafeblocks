@@ -9,7 +9,7 @@ import failsafeblocks.blocks.SafeBlock;
 public class SortSafeBlock<T extends Comparable<T>> extends SafeBlock<List<T>, List<T>>{
 
 	public SortSafeBlock() {
-		super(new InsertionSortV1Block<T>());
+		super(new MergeSortBlock<T>(), new InsertionSortBlock<T>());
 	}
 
 	@SafeVarargs

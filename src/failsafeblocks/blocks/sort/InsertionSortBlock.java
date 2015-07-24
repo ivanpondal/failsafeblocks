@@ -4,7 +4,7 @@ import java.util.List;
 
 import failsafeblocks.blocks.Block;
 
-public class InsertionSortV1Block<T extends Comparable<T>> implements Block<List<T>, List<T>>{
+public class InsertionSortBlock<T extends Comparable<T>> implements Block<List<T>, List<T>>{
 
 	@Override
 	public List<T> process(List<T> list) {

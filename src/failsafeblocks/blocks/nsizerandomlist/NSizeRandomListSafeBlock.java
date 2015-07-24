@@ -10,12 +10,12 @@ public class NSizeRandomListSafeBlock extends SafeBlock<Integer, List<Integer>>{
 
 
 	public NSizeRandomListSafeBlock() {
-		super(new NSizeRandomListGeneratorV2(), new NSizeRandomListGeneratorV1());
+		super(new NSizeRandomListBlockV2(), new NSizeRandomListBlockV1());
 	}
 
 	@SafeVarargs
-	public NSizeRandomListSafeBlock(Block<Integer, List<Integer>>... nSizeListBlocks) {
-		super(nSizeListBlocks);
+	public NSizeRandomListSafeBlock(Block<Integer, List<Integer>>... blocks) {
+		super(blocks);
 	}
 
 	@Override

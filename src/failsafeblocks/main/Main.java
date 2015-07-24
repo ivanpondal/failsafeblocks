@@ -1,13 +1,11 @@
 package failsafeblocks.main;
 
-import failsafeblocks.blocks.NSizeListSafeBlock;
-import failsafeblocks.blocks.NSizePopulatedListGenerator;
-import failsafeblocks.blocks.NSizeRandomlyPopulatedListGenerator;
+import failsafeblocks.blocks.nsizerandomlist.NSizeRandomListSafeBlock;
 
 public class Main {
 
 	public static void main(String[] args) {
-		NSizeListSafeBlock nSizeListBlock = new NSizeListSafeBlock(new NSizePopulatedListGenerator(), new NSizeRandomlyPopulatedListGenerator());
+		NSizeRandomListSafeBlock nSizeListBlock = new NSizeRandomListSafeBlock();
 		System.out.println(nSizeListBlock.execute(21));
 	}
 
